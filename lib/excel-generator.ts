@@ -717,7 +717,7 @@ function buildBenchmarks(wb: ExcelJS.Workbook, inputs: CalculatorInputs,
 }
 
 // ─── MAIN EXPORT ─────────────────────────────────────────────────────────────
-export async function generatePremiumExcel(inputs: CalculatorInputs): Promise<Buffer> {
+export async function generatePremiumExcel(inputs: CalculatorInputs): Promise<Uint8Array> {
   const r = compute(inputs)
   const sym = CURRENCY_SYMBOLS[inputs.currency] ?? '$'
   const fmt = curFmt(sym)
@@ -734,5 +734,5 @@ export async function generatePremiumExcel(inputs: CalculatorInputs): Promise<Bu
   buildBenchmarks(wb, inputs, r, sym, fmt)
 
   const buffer = await wb.xlsx.writeBuffer()
-  return Buffer.from(buffer)
+  return new Uint8Array(buffer)
 }

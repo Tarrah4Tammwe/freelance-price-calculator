@@ -48,7 +48,7 @@ export async function GET(req: NextRequest) {
   }
 
   // ── 3. Generate Excel in-process (pure Node.js — no Python required) ───────
-  let buffer: Buffer
+  let buffer: Uint8Array
   try {
     buffer = await generatePremiumExcel(inputs)
   } catch (err) {
@@ -56,7 +56,6 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Failed to generate Excel file' }, { status: 500 })
   }
 
-  // ── 4. Stream file as download ─────────────────────────────────────────────
   const currency = (inputs.currency ?? 'USD').toLowerCase()
   const filename = `freelance-premium-pack-${currency}.xlsx`
 
@@ -65,7 +64,7 @@ export async function GET(req: NextRequest) {
     headers: {
       'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
       'Content-Disposition': `attachment; filename="${filename}"`,
-      'Content-Length': buffer.length.toString(),
+      'Content-Length': buffer.byteLength.toString(),
       'Cache-Control': 'no-store',
     },
   })
