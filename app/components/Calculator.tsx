@@ -5,7 +5,6 @@ import {
   calculate,
   CURRENCY_SYMBOLS,
   AFFILIATE_LINKS,
-  PREMIUM_PRICE_DISPLAY,
   type CalculatorInputs,
   type CalculatorResults,
   type Currency,
@@ -461,7 +460,7 @@ export default function Calculator() {
                 <div className="border-2 border-accent rounded-sm p-6 bg-[#FFF7F4]">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="font-mono text-xs text-accent tracking-widest uppercase mb-1">Premium Excel Pack — {PREMIUM_PRICE_DISPLAY} one-off</p>
+                      <p className="font-mono text-xs text-accent tracking-widest uppercase mb-1">Premium Excel Pack — $4.99 one-off</p>
                       <h3 className="font-display text-2xl mb-2">Your Numbers. Your Pack. Ready to Use.</h3>
                       <ul className="text-sm text-muted space-y-1 mb-4">
                         <li>✓ <strong className="text-ink">📊 Rate Dashboard</strong> — all your rates & annual breakdown, pre-filled</li>
@@ -475,7 +474,7 @@ export default function Calculator() {
                         disabled={checkoutLoading}
                         className="bg-accent text-white font-semibold px-6 py-3 rounded-sm hover:bg-[#E04400] transition-colors disabled:opacity-60 flex items-center gap-2"
                       >
-                        {checkoutLoading ? 'Redirecting to checkout…' : `Get the Excel Pack — ${PREMIUM_PRICE_DISPLAY}`}
+                        {checkoutLoading ? 'Redirecting to checkout…' : 'Get the Excel Pack — $4.99'}
                       </button>
                     </div>
                   </div>
@@ -596,7 +595,7 @@ export default function Calculator() {
             },
             {
               q: 'Is this freelance calculator free?',
-              a: `Yes, completely free. The optional ${PREMIUM_PRICE_DISPLAY} download gives you a personalised PDF with your profit dashboard, expense tracker, rate benchmarking, and a pre-filled invoice template.`,
+              a: `Yes, completely free. The optional $4.99 download gives you a personalised Excel pack with your profit dashboard, expense tracker, rate benchmarking, and a pre-filled invoice template.`,
             },
           ].map((faq, i) => (
             <details key={i} className="group bg-card border border-border rounded-sm">

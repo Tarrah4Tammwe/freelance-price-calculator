@@ -29,16 +29,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Input data too large' }, { status: 400 })
     }
 
-    // Determine currency for Stripe — use USD for non-standard currencies
-    // (Stripe supports limited currencies for checkout)
-    const stripeSupportedCurrencies = [
-      'usd','gbp','eur','aud','cad','inr','brl','zar',
-      'php','sgd','sek','chf','mxn','aed','nok','dkk'
-    ]
-    const currencyLower = (inputs.currency || 'usd').toLowerCase()
-    const stripeCurrency = stripeSupportedCurrencies.includes(currencyLower)
-      ? currencyLower
-      : 'usd'
+    // Determine currency for Stripe — always use USD for payment
+    const stripeCurrency = 'usd'
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
