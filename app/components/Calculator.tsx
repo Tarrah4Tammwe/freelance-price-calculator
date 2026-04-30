@@ -405,7 +405,6 @@ export default function Calculator() {
                     ))}
                   </div>
                 </div>
-                </div>
 
                 {/* Project pricing */}
                 <div className="bg-card border border-border rounded-sm p-5">
