@@ -83,7 +83,7 @@ export default function Calculator() {
       {/* ─── Header ─── */}
       <header className="bg-ink text-paper py-6 px-4 md:px-8">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-start justify-between">
+          <div className="flex items-start">
             <div>
               <p className="font-mono text-xs text-muted tracking-widest mb-2 uppercase">
                 Freelance Price Calculator
@@ -95,9 +95,6 @@ export default function Calculator() {
               <p className="mt-3 text-sm text-[#B8B5AE] max-w-xl leading-relaxed">
                 The most comprehensive freelance rate calculator online. Calculate your ideal hourly rate, day rate, project price and true take-home profit — in any currency.
               </p>
-            </div>
-            <div className="hidden md:block text-right">
-              <span className="font-mono text-xs text-muted">4th tool</span>
             </div>
           </div>
         </div>
