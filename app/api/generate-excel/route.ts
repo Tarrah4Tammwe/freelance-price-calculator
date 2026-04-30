@@ -59,7 +59,14 @@ export async function GET(req: NextRequest) {
   const currency = (inputs.currency ?? 'USD').toLowerCase()
   const filename = `freelance-premium-pack-${currency}.xlsx`
 
-  return new NextResponse(buffer, {
+  const stream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(buffer)
+      controller.close()
+    },
+  })
+
+  return new NextResponse(stream, {
     status: 200,
     headers: {
       'Content-Type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
