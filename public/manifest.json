@@ -1,0 +1,17 @@
+{
+  "name": "Freelance Price Calculator",
+  "short_name": "Freelance Calculator",
+  "description": "The most comprehensive freelance price calculator online. Calculate your ideal hourly rate, day rate, project price, platform fees, and true take-home profit.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F4EF",
+  "theme_color": "#0D0D0D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
