@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   creator: seoConfig.siteName,
   openGraph: {
     type: 'website',
-    locale: 'en_GB',
+    locale: 'en_US',
     url: seoConfig.siteUrl,
     siteName: seoConfig.siteName,
     title: seoConfig.title,
@@ -39,7 +39,14 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
-  alternates: { canonical: seoConfig.siteUrl },
+  alternates: {
+    canonical: seoConfig.siteUrl,
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
 }
 
 const jsonLd = {
@@ -65,7 +72,7 @@ const jsonLd = {
         'Platform fee calculator',
         'Project pricing calculator',
         'Industry rate benchmarking',
-        'Premium PDF report',
+        'Premium Excel pack',
       ],
     },
     {
@@ -97,8 +104,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <meta charSet="utf-8" />
         <meta name="theme-color" content="#0D0D0D" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="manifest" href="/manifest.json" />
         {adsenseId && (
           <script
             async
@@ -109,6 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          suppressHydrationWarning
         />
       </head>
       <body className="min-h-screen bg-paper">
