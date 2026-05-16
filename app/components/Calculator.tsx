@@ -607,6 +607,40 @@ export default function Calculator() {
             </details>
           ))}
         </section>
+
+        {/* ─── Resources & Guides ─── */}
+        <section className="bg-paper border border-border rounded-sm p-8 mb-16">
+          <h2 className="font-display text-3xl mb-8">Learn How to Price Your Work</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-medium text-lg mb-4 text-accent">Pricing Guides</h3>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/guides/how-to-calculate-freelance-rate" className="text-ink hover:text-accent transition-colors">→ How to Calculate Your Freelance Rate</a></li>
+                <li><a href="/guides/freelance-rates-by-industry" className="text-ink hover:text-accent transition-colors">→ Freelance Rates by Industry</a></li>
+                <li><a href="/guides/project-based-pricing" className="text-ink hover:text-accent transition-colors">→ Project-Based Pricing Formula</a></li>
+                <li><a href="/guides/retainer-pricing" className="text-ink hover:text-accent transition-colors">→ How to Price Retainers</a></li>
+                <li><a href="/guides/value-based-pricing" className="text-ink hover:text-accent transition-colors">→ Value-Based Pricing</a></li>
+                <li><a href="/guides/freelance-platform-fees" className="text-ink hover:text-accent transition-colors">→ Platform Fees Comparison</a></li>
+                <li><a href="/guides/pricing-psychology" className="text-ink hover:text-accent transition-colors">→ Pricing Psychology</a></li>
+                <li><a href="/guides/hourly-vs-project-pricing" className="text-ink hover:text-accent transition-colors">→ Hourly vs Project Pricing</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-medium text-lg mb-4 text-accent">Industry Rates</h3>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/industry-rates/web-development" className="text-ink hover:text-accent transition-colors">→ Web Developer Rates</a></li>
+                <li><a href="/industry-rates/graphic-design" className="text-ink hover:text-accent transition-colors">→ Graphic Designer Rates</a></li>
+                <li><a href="/industry-rates/uiux-design" className="text-ink hover:text-accent transition-colors">→ UI/UX Designer Rates</a></li>
+                <li><a href="/industry-rates/copywriting" className="text-ink hover:text-accent transition-colors">→ Copywriter Rates</a></li>
+                <li><a href="/industry-rates/virtual-assistant" className="text-ink hover:text-accent transition-colors">→ Virtual Assistant Rates</a></li>
+                <li><a href="/industry-rates/seo-marketing" className="text-ink hover:text-accent transition-colors">→ SEO & Marketing Rates</a></li>
+                <li className="pt-2"><a href="/faq" className="text-ink hover:text-accent transition-colors font-medium">→ Pricing FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* ─── Footer ─── */}
