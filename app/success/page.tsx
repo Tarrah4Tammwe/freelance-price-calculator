@@ -163,7 +163,7 @@ function SuccessContent() {
 
         {status === 'done' && sessionId && (
           <div className="text-center mb-4">
-            
+            <a
               href={`/api/generate-excel?session_id=${sessionId}`}
               className="text-sm text-muted underline hover:text-ink transition-colors"
             >
