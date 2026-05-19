@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-export const metadata: Metadata = { title: 'Virtual Assistant Rates', description: 'Freelance virtual assistant hourly rates and retainer pricing.', alternates: { canonical: 'https://freelancepricecalculator.com/industry-rates/virtual-assistant' } }
+export const metadata: Metadata = { title: 'Virtual Assistant Rates', description: 'Freelance virtual assistant hourly rates and retainer pricing.' }
 export default function Page() {
   return (
     <article className="max-w-3xl mx-auto px-4 md:px-8 py-12">

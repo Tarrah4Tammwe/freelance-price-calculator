@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-export const metadata: Metadata = { title: 'Web Developer Freelance Rates 2024', description: 'Freelance web development rates by speciality and experience level.', alternates: { canonical: 'https://freelancepricecalculator.com/industry-rates/web-development' } }
+export const metadata: Metadata = { title: 'Web Developer Freelance Rates 2024', description: 'Freelance web development rates by speciality and experience level.' }
 export default function Page() {
   return (
     <article className="max-w-3xl mx-auto px-4 md:px-8 py-12">

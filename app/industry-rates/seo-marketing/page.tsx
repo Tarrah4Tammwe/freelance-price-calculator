@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-export const metadata: Metadata = { title: 'SEO & Digital Marketing Rates', description: 'Freelance SEO and digital marketing rates, strategy, and management.', alternates: { canonical: 'https://freelancepricecalculator.com/industry-rates/seo-marketing' } }
+export const metadata: Metadata = { title: 'SEO & Digital Marketing Rates', description: 'Freelance SEO and digital marketing rates, strategy, and management.' }
 export default function Page() {
   return (
     <article className="max-w-3xl mx-auto px-4 md:px-8 py-12">

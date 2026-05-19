@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-export const metadata: Metadata = { title: 'Copywriter Rates', description: 'Freelance copywriting rates for blogs, sales pages, and content.', alternates: { canonical: 'https://freelancepricecalculator.com/industry-rates/copywriting' } }
+export const metadata: Metadata = { title: 'Copywriter Rates', description: 'Freelance copywriting rates for blogs, sales pages, and content.' }
 export default function Page() {
   return (
     <article className="max-w-3xl mx-auto px-4 md:px-8 py-12">

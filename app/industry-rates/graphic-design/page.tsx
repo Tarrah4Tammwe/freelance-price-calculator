@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-export const metadata: Metadata = { title: 'Graphic Designer Rates', description: 'Freelance graphic design rates for logos, branding, and design work.', alternates: { canonical: 'https://freelancepricecalculator.com/industry-rates/graphic-design' } }
+export const metadata: Metadata = { title: 'Graphic Designer Rates', description: 'Freelance graphic design rates for logos, branding, and design work.' }
 export default function Page() {
   return (
     <article className="max-w-3xl mx-auto px-4 md:px-8 py-12">
